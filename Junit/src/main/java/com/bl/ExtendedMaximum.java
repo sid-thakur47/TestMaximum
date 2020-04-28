@@ -17,7 +17,12 @@ public class ExtendedMaximum<E extends Comparable<E>> {
         }
         return maximum;
     }
-    public E findMaximum() {
-        return findMaximum( multipleArguments );
+    public E testMaximum() {
+        E number = findMaximum( multipleArguments );
+        printMax( number );
+        return number;
+    }
+    public <E> void printMax(E num) {
+        System.out.println( num );
     }
 }
