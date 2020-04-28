@@ -22,36 +22,36 @@ public class MaximumTest {
         String max = maximum.findMaximum( "xyz", "abc", "ghi" );
         Assert.assertEquals( "xyz", max );
     }
-    @Test//normal integer
+    @Test
     public void givenThreeIntegersInConstructor_Should_ReturnMaximum() {
         int maxInt = new Maximum<>( 10, 20, 30 ).testMaximum();
         Assert.assertEquals( 30, maxInt );
     }
 
-    @Test//extebded integer
+    @Test
     public void givenThreeIntegersInVariableConstructor_Should_ReturnMaximum() {
         int maxInt = new ExtendedMaximum<>( 10, 20, 30, 40 ).testMaximum();
         Assert.assertEquals( 40, maxInt );
     }
-    @Test//normal float
+    @Test
     public void givenThreeFloatsInConstructor_Should_ReturnMaximum() {
         float maxfloat = new Maximum<Float>( 10.4f, 20.34f, 30.45f ).testMaximum();
         Assert.assertEquals( 30.45f, maxfloat, 0.01 );
     }
 
-    @Test//extended float
+    @Test
     public void givenThreeFloatsInVariableConstructor_Should_ReturnMaximum() {
-        float maxfloat = new ExtendedMaximum<>( 10.4f, 20.34f, 30.45f, 50f ).testMaximum();
-        Assert.assertEquals( 50.f, maxfloat, 0.01 );
+        float maxFloat = new ExtendedMaximum<>( 10.4f, 20.34f, 30.45f, 50f ).testMaximum();
+        Assert.assertEquals( 50.f, maxFloat, 0.01 );
     }
 
-    @Test//normal string
+    @Test
     public void givenThreeStringsInConstructor_Should_ReturnMaximum() {
         String maxString = new Maximum<>( "xyz", "abc", "def" ).testMaximum();
         Assert.assertEquals( "xyz", maxString );
     }
 
-    @Test//extended string
+    @Test
     public void givenThreeStringsInVariableConstructor_Should_ReturnMaximum() {
         String maxString = new ExtendedMaximum<>( "xyz", "abc", "def", "zzz" ).testMaximum();
         Assert.assertEquals( "zzz", maxString );
